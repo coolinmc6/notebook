@@ -10,3 +10,15 @@ This is a Pinterest-clone following the tutorial by [Mackenzie Child](https://ma
 
 
 #### CM Comments
+
+
+#### ~39:14
+* If I want different roots for signed in and non-signed in users, I can do the following:
+```ruby
+	# routes.rb
+authenticated :user do
+	root 'notes#index', as: "authenticated_root"  	
+end
+
+root 'welcome#index'
+```
