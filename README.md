@@ -26,3 +26,7 @@ root 'welcome#index'
 * I can't get the welcome image to come through
   * "SOLVED": So I try to add the images one at a time but that didn't work for some reason.  Once I added the second image,
 	which was the callouts background, they both came through.
+* Note submission styling.  I need to look into the simple_format method because it actually recognizes new lines and other pieces that it normally wouldn't pick up
+```haml
+%p= simple_format(@note.content)
+```
